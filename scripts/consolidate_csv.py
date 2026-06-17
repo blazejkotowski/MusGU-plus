@@ -11,6 +11,9 @@ import yaml
 from bs4 import BeautifulSoup
 
 
+UTC = getattr(datetime, "UTC", datetime.timezone.utc)
+
+
 DIMENSIONS = [
     (
         "adaptability",
@@ -378,7 +381,7 @@ def create_index(table_html, applications_html):
             paragraphs[-1].append(link)
             paragraphs[-1].append(".")
 
-    build_message = datetime.datetime.now(datetime.UTC).strftime("Discovery tool last updated on %Y-%m-%d at %H:%M UTC.")
+    build_message = datetime.datetime.now(UTC).strftime("Discovery tool last updated on %Y-%m-%d at %H:%M UTC.")
     target_footer = soup.find(id="build-time")
     if target_footer:
         target_footer.string = build_message
@@ -514,7 +517,7 @@ def render_model_page(project_name, project_row):
     if build_time:
         build_time.string = (
             "Model page last updated on "
-            + datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d at %H:%M UTC")
+            + datetime.datetime.now(UTC).strftime("%Y-%m-%d at %H:%M UTC")
             + "."
         )
 
