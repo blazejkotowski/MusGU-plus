@@ -10,6 +10,8 @@ project:
     architecture:
     applications:
     link:
+    repository:
+    article:
     notes:
 
 # [A] ADAPTABILITY

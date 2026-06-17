@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title id="page-title">MusGU+ Evaluation: YuE</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../model_page.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="page-shell">
+<div class="header">
+<h1 id="model-page-heading">MusGU+ Evaluation: YuE</h1>
+</div>
+<div id="description">
+<p style="margin-top: 0;">
+        The <strong>Music-Generative Usable+ AI (MusGU+)</strong> framework is a musician-centered evaluation framework designed to assess how generative music models can be adapted, used, and controlled in real-world creative contexts.
+        The framework evaluates models along three complementary dimensions, with each dimension addressing a key question from the musician's perspective:
+      </p>
+<ul>
+<li><strong>Adaptability</strong> — <em>Can I realistically adapt this model to my own data?</em></li>
+<li><strong>Usability</strong> — <em>Can I access, run, and integrate this model into my music-making workflow?</em></li>
+<li><strong>Controllability</strong> — <em>Can I guide the model in musically meaningful and interpretable ways?</em></li>
+</ul>
+<p style="margin-bottom: 0;">
+        📖 Read the <a href="../../framework.html">detailed evaluation criteria</a> or return to the <a href="../../index.html">discovery tool</a>.
+      </p>
+</div>
+<section class="hero-card">
+<div class="resource-links-wrap">
+<div class="resource-links" id="resource-links"><a class="resource-link" href="https://map-yue.github.io/" rel="noreferrer noopener" target="_blank"><span aria-hidden="true" class="resource-link-icon">🔗</span><span class="resource-link-label">Website</span></a><a class="resource-link" href="https://github.com/multimodal-art-projection/YuE" rel="noreferrer noopener" target="_blank"><span aria-hidden="true" class="resource-link-icon">💻</span><span class="resource-link-label">Repository</span></a><a class="resource-link" href="https://arxiv.org/pdf/2503.08638" rel="noreferrer noopener" target="_blank"><span aria-hidden="true" class="resource-link-icon">📄</span><span class="resource-link-label">Article</span></a><a class="resource-link" href="https://github.com/lauraibnz/MusGU-plus/blob/main/projects/yue.yaml" rel="noreferrer noopener" target="_blank"><span aria-hidden="true" class="resource-link-icon">🗂</span><span class="resource-link-label">YAML source</span></a></div>
+</div>
+<p class="meta-line"><strong>Affiliation:</strong> <span id="model-affiliation">The Hong Kong University of Science and Technology (HKUST) and MAP</span></p>
+<p class="meta-line"><strong>Architecture:</strong> <span id="model-architecture">autoregressive transformer</span></p>
+
+<section class="applications-block">
+<h2>Musical applications</h2>
+<div id="applications-content"><p class="applications-copy">continuation, full song generation, lyrics-to-song</p></div>
+</section>
+</section>
+<div id="dimension-sections">
+<section aria-labelledby="adaptability-title" class="detail-section">
+<div class="section-heading">
+<h2 id="adaptability-title">Adaptability</h2>
+<div aria-label="Adaptability summary 40 percent" class="score-badge">40%</div>
+</div>
+<div class="criterion-grid">
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Hardware Requirements</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">YuE requires dedicated high-end GPU infrastructure for training and scaling (e.g., tens to hundreds of NVIDIA H800 GPUs via Megatron-LM). Fine-tuning setup assumes substantial VRAM and distributed tooling. Therefore, training or fine-tuning is not feasible without institutional-level computational resources. </p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Dataset Size</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">YuE was trained on large-scale datasets (e.g., hundreds of thousands of hours of audio), and does not support adaptation on small datasets. </p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Adaptation Pathways</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">YuE provides fine-tuning code in a subdirectory of the main GitHub repository. However, the pathway documentation assumes prior technical knowledge and infrastructure, which makes adaptation technically possible but not streamlined from a musician's perspective.  </p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Technical Barriers</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">Fine-tuning is provided only through low-level training scripts. No graphical interface, simplified notebook, or musician-oriented workflow is provided, resulting in high technical barriers to adaptation.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Model Redistribution</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">YuE is released under the Apache 2.0 license, which explicitly permits modification and redistribution of derivative works, including fine-tuned models. Although fine-tuning is technically demanding, adapted checkpoints can be legally redistributed without restriction.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="usability-title" class="detail-section">
+<div class="section-heading">
+<h2 id="usability-title">Usability</h2>
+<div aria-label="Usability summary 58 percent" class="score-badge">58%</div>
+</div>
+<div class="criterion-grid">
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Interface Availability</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">Multiple community-developed Gradio-based UIs are available for YuE, most of them based on or derived from the interface developed by Alisson Pereira Anjos (alisson-anjos). There is also a third-party one-click installer (Pinokio), which can simplify local setup on Windows. Still, these UIs require local setup, GPU configuration, and technical familiarity. Moreover, there are some community-develop Colab notebooks for specific tasks, such as music continuation. No official standalone or plug-and-play application in provided.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Access Restrictions</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">YuE’s inference code and pretrained checkpoints are openly available without paywalls, subscriptions, or usage limits. The model is released under the Apache 2.0 license, allowing unrestricted use, with no login or platform-specific access requirements.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Real-time Capabilities</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">YuE does not support real-time or interactive generation. Inference requires a GPU, and generation latency is substantial (e.g., generating 30 seconds of audio takes ~150 s on a NVIDIA H800 and ~360 s on a RTX4090). </p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Workflow Integration</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">Interaction is limited to offline, file-based generation via scripts or standalone UIs, with no native support for DAW plugins, MIDI/OSC control, or other direct integration into existing creative setups.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Output Licensing</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">YuE outputs may be used for both personal and commercial purposes, and users retain ownership of generated content. However, the license encourages attribution to the model (“YuE by HKUST/M-A-P”) and recommends transparency when publishing AI-generated works. </p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Community Support</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">Support exists via a Discord channel, GitHub issues and documentation. </p>
+</article>
+</div>
+</section>
+<section aria-labelledby="controllability-title" class="detail-section">
+<div class="section-heading">
+<h2 id="controllability-title">Controllability</h2>
+<div aria-label="Controllability summary 50 percent" class="score-badge">50%</div>
+</div>
+<div class="criterion-grid">
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Conditioning Inputs</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">YuE supports generation conditioning through text (lyrics, structural labels, and style tags), and optional reference audio for in-context learning. </p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Time-Varying Control</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">YuE provides limited time-localized control through section-based generation, allowing different musical behaviors across structured segments (e.g., verse, chorus). However, control remains discrete and symbolic, with no fine-grained or continuous time-varying manipulation within segments.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Feature Disentanglement</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">YuE introduces training-stage mechanisms to reduce entanglement between textual and audio conditioning, yielding partial disentanglement at inference time. Nonetheless, internal musical attributes remain bundled, and disentanglement is neither explicit nor robustly exposed to user-level control.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Control Parameters</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">YuE supports a few inference-time control parameters, limited to repetition penalty (to discourage looping) and deterministic seeding. Other controls, including temperature, top-p sampling and per-segment guidance scaling, remain hard-coded in the inference script, and direct manipulation of internal latent representations is not supported.</p>
+</article>
+</div>
+</section>
+</div>
+<p class="footer-note" id="build-time">Model page last updated on 2026-06-17 at 19:43 UTC.</p>
+</main>
+</body>
+</html>

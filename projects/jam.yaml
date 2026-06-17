@@ -8,8 +8,10 @@ project:
   name: JAM
   affiliation: 'Singapore University of Technology and Design and Lamda Labs. '
   architecture: latent diffusion, rectified flow
-  applications: full-song generation, lyrics-to-song
-  link: ''
+  applications: full song generation, lyrics-to-song
+  link: https://declare-lab.github.io/jamify
+  repository: https://github.com/declare-lab/jamify
+  article: https://arxiv.org/abs/2507.20880
   notes: ''
 adaptability:
   hardware_requirements:
@@ -43,7 +45,7 @@ controllability:
     value: partial
     notes: JAM can be conditioned by lyrics (including word- and phoneme-level timing)
       and style (via text or audio).
-    tags: audio, lyrics, phoneme, text
+    tags: audio, lyrics, text, timing
   time_varying_control:
     value: partial
     notes: JAM supports precise time-varying control over vocal structure, with explicit

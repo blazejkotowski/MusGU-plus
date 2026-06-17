@@ -32,6 +32,8 @@ Each dimension is composed of multiple criteria (e.g., hardware requirements, in
 
 Rather than presenting a fixed leaderboard, MusGU+ is designed as an interactive discovery tool. It allows musicians to explore, filter, and compare generative music models based on specific criteria and tags, highlighting differences in adaptability, usability, and controllability. This supports early-stage exploration and informed selection of models that may fit particular creative practices or workflow needs.
 
+Each model can also be opened in a dedicated detail page with links, musical applications, and criterion-level evaluation notes.
+
 
 ## Relationship to MusGO
 

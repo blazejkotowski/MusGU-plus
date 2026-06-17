@@ -9,7 +9,9 @@ project:
   affiliation: Stablility AI
   architecture: latent diffusion
   applications: style transfer, text-to-music
-  link: ''
+  link: https://arc-text2audio.github.io/web/
+  repository: https://github.com/Stability-AI/stable-audio-tools
+  article: https://arxiv.org/abs/2505.08175
   notes: ''
 adaptability:
   hardware_requirements:

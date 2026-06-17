@@ -8,8 +8,10 @@ project:
   name: Udio
   affiliation: Udio
   architecture: ''
-  applications: continuation, editing, full-song generation, remixing, text-to-music
-  link: ''
+  applications: continuation, editing, full song generation, remixing, text-to-music
+  link: https://www.udio.com/
+  repository: ''
+  article: ''
   notes: ''
 adaptability:
   hardware_requirements:
@@ -40,7 +42,7 @@ controllability:
   conditioning_inputs:
     value: partial
     notes: Udio relies on text-based conditioning, including free-form prompts and
-      lyrics. It allows to set stylistic reference to set the overall mood and energy
+      lyrics. It allows to set stylistic reference to set the overall mood and tempo
       of the track.
     tags: lyrics, style tags, text
   time_varying_control:

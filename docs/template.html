@@ -579,14 +579,19 @@ body.ready {
 }
 
 #footer {
-  margin-top: 30px;
-  padding: 30px 40px;
+  margin: 20px auto 0;
+  padding: 0;
   margin-bottom: 0;
-  background: #f8f8f8;
-  border-top: 3px solid #e0e0e0;
+  background: none;
+  border-top: none;
   text-align: center;
-  font-size: 14px;
-  color: #666;
+  font-size: 0.9rem;
+  color: #6b7280;
+  max-width: 1200px;
+}
+
+#footer p {
+  margin: 0;
 }
 .legend {
   display: flex;
@@ -749,7 +754,7 @@ body.ready {
 </div>
 
 <div id="footer">
-  <p id="build-time">Table last built: [timestamp]</p>
+  <p id="build-time">Discovery tool last updated on [timestamp]</p>
 </div>
 <script>
 // Filter state

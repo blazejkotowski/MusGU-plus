@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title id="page-title">MusGU+ Evaluation: MusicGen</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="../../model_page.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="page-shell">
+<div class="header">
+<h1 id="model-page-heading">MusGU+ Evaluation: MusicGen</h1>
+</div>
+<div id="description">
+<p style="margin-top: 0;">
+        The <strong>Music-Generative Usable+ AI (MusGU+)</strong> framework is a musician-centered evaluation framework designed to assess how generative music models can be adapted, used, and controlled in real-world creative contexts.
+        The framework evaluates models along three complementary dimensions, with each dimension addressing a key question from the musician's perspective:
+      </p>
+<ul>
+<li><strong>Adaptability</strong> — <em>Can I realistically adapt this model to my own data?</em></li>
+<li><strong>Usability</strong> — <em>Can I access, run, and integrate this model into my music-making workflow?</em></li>
+<li><strong>Controllability</strong> — <em>Can I guide the model in musically meaningful and interpretable ways?</em></li>
+</ul>
+<p style="margin-bottom: 0;">
+        📖 Read the <a href="../../framework.html">detailed evaluation criteria</a> or return to the <a href="../../index.html">discovery tool</a>.
+      </p>
+</div>
+<section class="hero-card">
+<div class="resource-links-wrap">
+<div class="resource-links" id="resource-links"><a class="resource-link" href="https://github.com/facebookresearch/audiocraft" rel="noreferrer noopener" target="_blank"><span aria-hidden="true" class="resource-link-icon">💻</span><span class="resource-link-label">Repository</span></a><a class="resource-link" href="https://arxiv.org/abs/2306.05284" rel="noreferrer noopener" target="_blank"><span aria-hidden="true" class="resource-link-icon">📄</span><span class="resource-link-label">Article</span></a><a class="resource-link" href="https://github.com/lauraibnz/MusGU-plus/blob/main/projects/musicgen.yaml" rel="noreferrer noopener" target="_blank"><span aria-hidden="true" class="resource-link-icon">🗂</span><span class="resource-link-label">YAML source</span></a></div>
+</div>
+<p class="meta-line"><strong>Affiliation:</strong> <span id="model-affiliation">Meta AI</span></p>
+<p class="meta-line"><strong>Architecture:</strong> <span id="model-architecture">autoregressive transformer</span></p>
+
+<section class="applications-block">
+<h2>Musical applications</h2>
+<div id="applications-content"><p class="applications-copy">continuation, text-to-music</p></div>
+</section>
+</section>
+<div id="dimension-sections">
+<section aria-labelledby="adaptability-title" class="detail-section">
+<div class="section-heading">
+<h2 id="adaptability-title">Adaptability</h2>
+<div aria-label="Adaptability summary 30 percent" class="score-badge">30%</div>
+</div>
+<div class="criterion-grid">
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Hardware Requirements</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">Training and fine-tuning require institutional-scale hardware. Official models were trained using dozens of GPUs, and even inference for medium/large variants requires ~16 GB VRAM GPUs. CPU-only training is not supported.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Dataset Size</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">The model is designed around very large curated datasets (≈20k hours). Fine-tuning presupposes similarly structured datasets with metadata, which makes the use of personal data collections impractical.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Adaptation Pathways</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">MusicGen provides complete training and fine-tuning code, supports continuation from pretrained checkpoints, and includes documented data processing pipelines. This makes adaptation on personal or custom datasets technically feasible, even if demanding in practice.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Technical Barriers</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">Adaptation requires extensive technical expertise (e.g,., Dora, AudioCraft configs, tokenizer alignment, distributed training). No user-friendly adaptation interface is provided.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Model Redistribution</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">While the software is permissively licensed (MIT), redistribution of trained models and checkpoints is constrained by the weights license (CC BY-NC 4.0), which imposes a non-commercial restriction and requires attribution.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="usability-title" class="detail-section">
+<div class="section-heading">
+<h2 id="usability-title">Usability</h2>
+<div aria-label="Usability summary 50 percent" class="score-badge">50%</div>
+</div>
+<div class="criterion-grid">
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Interface Availability</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">Gradio code and Colab notebooks are provided, but require setup and GPU access. A hosted HuggingFace web demo is available but currently unreliable.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Access Restrictions</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">Inference via HuggingFace Spaces, although currently unreliable, is freely accessible without login or usage restrictions. Pretrained checkpoints and inference code are publicly available, with no paywalls, subscriptions, or usage limits imposed on model use.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Real-time Capabilities</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">Generation is offline and not suitable for real-time use. Local inference requires a GPU.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Workflow Integration</h3>
+<span class="status-pill low">✘ Not supported</span>
+</div>
+<p class="criterion-notes">MusicGen offers no native integration with DAWs, live music environments, or hardware. Usage is limited to file-based generation via notebooks or scripts.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Output Licensing</h3>
+<span class="status-pill high">✔︎ Fully supported</span>
+</div>
+<p class="criterion-notes">Generated audio can be used for personal and commercial purposes under the model’s license.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Community Support</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">Support exists via GitHub issues, documentation, and community tutorials, but there is no dedicated musician-oriented support space.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="controllability-title" class="detail-section">
+<div class="section-heading">
+<h2 id="controllability-title">Controllability</h2>
+<div aria-label="Controllability summary 50 percent" class="score-badge">50%</div>
+</div>
+<div class="criterion-grid">
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Conditioning Inputs</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">Supports text conditioning and melody conditioning via chromagram (audio-derived). No MIDI or symbolic score input is supported.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Time-Varying Control</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">Melody conditioning enables coarse time-aligned control over harmonic structure, but there is no per-frame or parameter-level temporal control exposed to users.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Feature Disentanglement</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">Text and melody controls influence different aspects of generation, but interactions remain implicit and do not enable interpretable or musically isolated guidance.</p>
+</article>
+<article class="criterion-card">
+<div class="criterion-card-top">
+<h3>Control Parameters</h3>
+<span class="status-pill partial">~ Partially supported</span>
+</div>
+<p class="criterion-notes">MusicGen exposes high-level generation parameters such as duration, sampling controls (temperature, top-k/top-p), and a classifier-free guidance (CFG) coefficient. These provide coarse control over variability and conditioning strength, but do not enable manipulation of internal representations.</p>
+</article>
+</div>
+</section>
+</div>
+<p class="footer-note" id="build-time">Model page last updated on 2026-06-17 at 19:43 UTC.</p>
+</main>
+</body>
+</html>

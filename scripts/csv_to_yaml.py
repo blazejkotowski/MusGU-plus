@@ -2,9 +2,10 @@
 # Converts Notion export to structured YAML files
 
 import csv
-import yaml
 import os
 import copy
+
+import yaml
 
 # File paths
 csv_file_path = './misc/MusGU+ 2cd73fee0f4280859c39dab5b950f451_all.csv'
@@ -32,6 +33,15 @@ def normalize_value(val):
         return 'low'
     return val
 
+
+def normalize_link(val):
+    if not val:
+        return ''
+    clean_val = val.strip()
+    if clean_val.lower().startswith('not available'):
+        return ''
+    return clean_val
+
 def load_yaml_template(template_path):
     with open(template_path, 'r') as template_file:
         return yaml.safe_load(template_file)
@@ -56,7 +66,9 @@ def csv_to_yaml(csv_path, yaml_template):
             project_data['project']['affiliation'] = row.get('Affiliation(s)', '')
             project_data['project']['architecture'] = row.get('Model Architecture', '')
             project_data['project']['applications'] = row.get('Musical Applications', '')
-            project_data['project']['link'] = ''
+            project_data['project']['link'] = normalize_link(row.get('Website', ''))
+            project_data['project']['repository'] = normalize_link(row.get('Repository', ''))
+            project_data['project']['article'] = normalize_link(row.get('Article', ''))
             project_data['project']['notes'] = ''
             
             # Adaptability

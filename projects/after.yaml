@@ -9,7 +9,9 @@ project:
   affiliation: IRCAM
   architecture: latent diffusion, rectified flow
   applications: MIDI-to-audio, audio synthesis, style transfer
-  link: ''
+  link: https://forum.ircam.fr/projects/detail/after/
+  repository: https://github.com/acids-ircam/AFTER
+  article: https://arxiv.org/abs/2408.00196
   notes: ''
 adaptability:
   hardware_requirements:

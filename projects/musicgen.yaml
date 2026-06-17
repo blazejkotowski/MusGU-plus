@@ -10,6 +10,8 @@ project:
   architecture: autoregressive transformer
   applications: continuation, text-to-music
   link: ''
+  repository: https://github.com/facebookresearch/audiocraft
+  article: https://arxiv.org/abs/2306.05284
   notes: ''
 adaptability:
   hardware_requirements:
