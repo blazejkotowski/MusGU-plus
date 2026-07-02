@@ -371,7 +371,7 @@ def create_index(table_html, applications_html):
         paragraphs = guide_paragraphs.find_all("p")
         if paragraphs:
             paragraphs[-1].clear()
-            paragraphs[-1].append("Click a model name to open its detail page, or explore the corresponding YAML file in the ")
+            paragraphs[-1].append("For the underlying evaluation files, explore the corresponding YAML entries in the ")
             link = soup.new_tag(
                 "a",
                 href="https://github.com/lauraibnz/MusGU-plus/tree/main/projects",
