@@ -12,6 +12,8 @@ project:
     link:
     repository:
     article:
+    checkpoints:
+    ui:
     notes:
 
 # [A] ADAPTABILITY

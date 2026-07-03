@@ -12,6 +12,8 @@ project:
   link: https://forum.ircam.fr/projects/detail/after/
   repository: https://github.com/acids-ircam/AFTER
   article: https://arxiv.org/abs/2408.00196
+  checkpoints: https://nubo.ircam.fr/index.php/s/8NFD5gWwbkT4G5P
+  ui: https://nubo.ircam.fr/index.php/s/8NFD5gWwbkT4G5P?dir=/After%20models/after.m4l
   notes: ''
 adaptability:
   hardware_requirements:

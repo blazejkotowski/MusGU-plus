@@ -12,6 +12,8 @@ project:
   link: https://forum.ircam.fr/projects/detail/rave/
   repository: https://github.com/acids-ircam/RAVE
   article: https://arxiv.org/abs/2111.05011
+  checkpoints: https://acids-ircam.github.io/rave_models_download
+  ui: https://forum.ircam.fr/projects/detail/rave-vst/
   notes: ''
 adaptability:
   hardware_requirements:

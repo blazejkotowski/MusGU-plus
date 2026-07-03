@@ -12,6 +12,8 @@ project:
   link: https://arc-text2audio.github.io/web/
   repository: https://github.com/Stability-AI/stable-audio-tools
   article: https://arxiv.org/abs/2505.08175
+  checkpoints: https://huggingface.co/stabilityai/stable-audio-open-small/blob/main/base_model.ckpt
+  ui: https://github.com/Stability-AI/stable-audio-tools/blob/main/run_gradio.py
   notes: ''
 adaptability:
   hardware_requirements:

@@ -36,7 +36,7 @@ MusGU+ is designed as an interactive discovery tool rather than a fixed leaderbo
 
 If you would like to help expand or refine MusGU+, there are two main ways to contribute:
 
-- **Suggest a new model**. The simplest option is to open an issue using the **[Suggest a New Model](https://github.com/lauraibnz/MusGU-plus/issues/new?template=suggest-a-new-model.md)** template. A brief explanation and any relevant links are enough; maintainers will take care of the detailed evaluation. More experienced contributors can instead create a new branch, add a YAML evaluation in [`projects/`](projects) following [`projects/_template.yaml`](projects/_template.yaml), and submit a pull request.
+- **Suggest a new model**. The simplest option is to open an issue using the **[Suggest a New Model](https://github.com/lauraibnz/MusGU-plus/issues/new?template=suggest-a-new-model.md)** template. A brief explanation and any relevant links are enough; maintainers will take care of the detailed evaluation. More experienced contributors can instead create a new branch, add a YAML evaluation in **[`projects/`](projects)** following **[`projects/_template.yaml`](projects/_template.yaml)**, and submit a pull request.
 - **Propose changes to an existing evaluation**. If you think a current model entry should be updated, corrected, or expanded, you can open an issue or submit a pull request with supporting evidence.
 
 

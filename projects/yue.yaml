@@ -12,6 +12,8 @@ project:
   link: https://map-yue.github.io/
   repository: https://github.com/multimodal-art-projection/YuE
   article: https://arxiv.org/pdf/2503.08638
+  checkpoints: https://huggingface.co/m-a-p/YuE-s1-7B-anneal-en-cot
+  ui: https://github.com/joeljuvel/YuE-UI
   notes: ''
 adaptability:
   hardware_requirements:

@@ -12,6 +12,8 @@ project:
   link: https://www.udio.com/
   repository: ''
   article: ''
+  checkpoints: ''
+  ui: https://www.udio.com/song-builder
   notes: ''
 adaptability:
   hardware_requirements:

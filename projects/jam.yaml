@@ -12,6 +12,8 @@ project:
   link: https://declare-lab.github.io/jamify
   repository: https://github.com/declare-lab/jamify
   article: https://arxiv.org/abs/2507.20880
+  checkpoints: https://huggingface.co/declare-lab/JAM-0.5/blob/main/jam-0_5.safetensors
+  ui: https://huggingface.co/spaces/declare-lab/JAM
   notes: ''
 adaptability:
   hardware_requirements:

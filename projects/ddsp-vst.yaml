@@ -12,6 +12,8 @@ project:
   link: https://magenta.withgoogle.com/ddsp-vst
   repository: https://github.com/magenta/ddsp-vst
   article: https://arxiv.org/abs/2001.04643
+  checkpoints: ''
+  ui: https://magenta.withgoogle.com/ddsp-vst
   notes: ''
 adaptability:
   hardware_requirements:

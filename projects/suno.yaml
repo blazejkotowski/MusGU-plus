@@ -12,6 +12,8 @@ project:
   link: https://suno.com
   repository: ''
   article: ''
+  checkpoints: ''
+  ui: https://suno.com/home/advanced
   notes: ''
 adaptability:
   hardware_requirements:

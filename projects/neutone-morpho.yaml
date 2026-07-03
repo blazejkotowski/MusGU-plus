@@ -12,6 +12,8 @@ project:
   link: https://neutone.ai/morpho
   repository: ''
   article: ''
+  checkpoints: ''
+  ui: https://neutone.ai/morpho
   notes: ''
 adaptability:
   hardware_requirements:

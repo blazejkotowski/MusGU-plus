@@ -12,6 +12,8 @@ project:
   link: ''
   repository: https://github.com/facebookresearch/audiocraft
   article: https://arxiv.org/abs/2306.05284
+  checkpoints: https://huggingface.co/facebook/models
+  ui: https://huggingface.co/spaces/facebook/MusicGen
   notes: ''
 adaptability:
   hardware_requirements:

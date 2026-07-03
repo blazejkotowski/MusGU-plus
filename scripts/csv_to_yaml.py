@@ -69,6 +69,8 @@ def csv_to_yaml(csv_path, yaml_template):
             project_data['project']['link'] = normalize_link(row.get('Website', ''))
             project_data['project']['repository'] = normalize_link(row.get('Repository', ''))
             project_data['project']['article'] = normalize_link(row.get('Article', ''))
+            project_data['project']['checkpoints'] = normalize_link(row.get('Checkpoints', ''))
+            project_data['project']['ui'] = normalize_link(row.get('UI', ''))
             project_data['project']['notes'] = ''
             
             # Adaptability

@@ -401,7 +401,8 @@ def render_link_list(project_row, slug):
         ("🔗", "Website", project_row.get("project.link", "")),
         ("💻", "Repository", project_row.get("project.repository", "")),
         ("📄", "Article", project_row.get("project.article", "")),
-        ("🗂", "YAML source", f"https://github.com/lauraibnz/MusGU-plus/blob/main/projects/{slug}.yaml"),
+        ("⬇️", "Checkpoints", project_row.get("project.checkpoints", "")),
+        ("🎹", "UI", project_row.get("project.ui", "")),
     ]
 
     for icon, label, url in link_specs:
@@ -477,6 +478,10 @@ def render_model_page(project_name, project_row):
     page_heading = soup.find(id="model-page-heading")
     if page_heading:
         page_heading.string = f"MusGU+ Evaluation: {project_name}"
+
+    yaml_source_link = soup.find(id="yaml-source-link")
+    if yaml_source_link:
+        yaml_source_link["href"] = f"https://github.com/lauraibnz/MusGU-plus/blob/main/projects/{slug}.yaml"
 
     model_affiliation = soup.find(id="model-affiliation")
     if model_affiliation:
