@@ -7,7 +7,7 @@
 project:
   name: PLAUD
   affiliation: 'Music Technology Group, Universitat Pompeu Fabra'
-  architecture: differentiable DSP autoencoder + autoregressive transformer prior
+  architecture: differentiable DSP, autoregressive transformer
   applications: audio synthesis, generative performance, style morphing
   link: ''
   repository: https://github.com/blazejkotowski/plaud
