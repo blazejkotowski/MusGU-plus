@@ -76,7 +76,7 @@ controllability:
       sampling temperature, classifier-free guidance strength, control envelopes, and
       synth-level attributes such as waveshaping and spectral shaping, together with
       direct access to the per-frame control and latent representation.
-    tags: latent manipulation, style pad, temperature, guidance
+    tags: latent manipulation, randomness, conditioning strength
 usability:
   interface_availability:
     value: high
