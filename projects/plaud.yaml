@@ -6,7 +6,7 @@
 
 project:
   name: PLAUD
-  affiliation: ''
+  affiliation: 'Music Technology Group, Universitat Pompeu Fabra'
   architecture: differentiable DSP autoencoder + autoregressive transformer prior
   applications: audio synthesis, generative performance, style morphing
   link: ''
